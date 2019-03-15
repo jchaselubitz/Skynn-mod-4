@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   componentDidMount () {
-    Data.map((formula) => console.log(formula)) // this.setState({formulas: [...formulas, formula]})
+    this.setState({formulas: Data})
   }
   
 
@@ -23,7 +23,7 @@ class App extends Component {
        {/* <nav><NavBar /></nav> */}
        <div className="formulation-container">
        {console.log("formulas state at App", this.state.formulas)}
-        {/* <FormulationContainer formulas={this.state.formulas} /> */}
+        <FormulationContainer formulas={this.state.formulas} />
        </div>
       </div>
     );
