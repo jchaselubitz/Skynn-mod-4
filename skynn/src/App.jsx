@@ -9,21 +9,21 @@ class App extends Component {
 
   state = {
     formulas: [],
-    selectedFormulaId: undefined
+    
   }
 
   componentDidMount () {
-    Data.map((formula) => this.setState({formulas: [...formulas, formula]}))
+    Data.map((formula) => console.log(formula)) // this.setState({formulas: [...formulas, formula]})
   }
   
 
   render() {
     return (
       <div className="App">
-       <nav><NavBar /></nav>
+       {/* <nav><NavBar /></nav> */}
        <div className="formulation-container">
-       {this.populateFormulationContainer()}
-        <FormulationContainer formulas={this.state.formulas} />
+       {console.log("formulas state at App", this.state.formulas)}
+        {/* <FormulationContainer formulas={this.state.formulas} /> */}
        </div>
       </div>
     );

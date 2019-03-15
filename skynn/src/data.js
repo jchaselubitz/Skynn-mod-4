@@ -18,3 +18,5 @@ const formulas = [
     favourite: false
   }
 ]
+
+export default formulas

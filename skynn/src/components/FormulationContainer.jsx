@@ -1,16 +1,24 @@
-import React, { Component } from 'react';
-import SideBar from './components/SideBar';
+// import React, { Component } from 'react';
+// import SideBar from './SideBar';
+
+// // send formulations to sidebar
+
+// class FormulationContainer extends Component {
+//   state = { 
+//     formulas: this.props.formulas,
+//     selectedFormulaId: undefined
+//    }
 
 
-class FormulationContainer extends Component {
-  state = {  }
-  render() { 
-    return (  
-      <div className="sidebar">
-        <SideBar />
-      </div>
-    );
-  }
-}
+//   render() { 
+//     return (  
+      
+//       <div className="sidebar">
+//       {console.log("formulas state at FormulationContainer", this.state.formulas)}
+//         {/* <SideBar formulas={this.state.formulas}/> */}
+//       </div>
+//     );
+//   }
+// }
  
-export default FormulationContainer;
+// export default FormulationContainer;
