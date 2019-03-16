@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
 const FormulationListItem = (props) => {
-  console.log("sdfasdf",props)
+
   return ( 
-    <h4>{props.formulaName}
+    <>
+    <h4 onClick={() => props.handleClick(props.formulaId)}> {props.formulaName}
       </h4>
+    </>
    );
 }
  
