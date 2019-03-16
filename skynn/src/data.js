@@ -6,7 +6,7 @@ const formulas = [
     ingredients: ['coconut oil', 'cat urine', 'mud','honey'],
     tags: ["face", "mask", "dirt", "cat"],
     conditions: ["dry skin"],
-    favourite: false
+    // favourite: false
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const formulas = [
     ingredients: ['apple cider vinegar', 'witch hazel', 'water'],
     tags: ['toner','face'],
     conditions: ['oily skin', 'combination skin'],
-    favourite: false
+    // favourite: false
   }
 ]
 

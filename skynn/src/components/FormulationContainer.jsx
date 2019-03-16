@@ -30,10 +30,15 @@ filterFormula = () => {
 }
 
 addRemoveToFavorites = (event, formula) => {
-  console.log(event.target.checked)
-  this.setState({
-    favourites: [...this.state.favourites, formula]
-  })
+  if (event.target.checked === true) {
+    this.setState({
+      favourites: [...this.state.favourites, formula]
+    })
+  } else {
+    this.setState({
+      favourites: this.state.favourites.filter(formula => this.props.formula === formula)
+    })
+  }
 }
 // ===========ADD NEW FUNCTIONS=============
 

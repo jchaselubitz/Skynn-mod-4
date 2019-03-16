@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class FormulationDetails extends Component  {
 
-  isFavorite = () => {
-    return this.props.favourites.find(formula => this.props.formula === formula)
+  isFavourite = () => {
+    return this.props.favourites.find(formula => this.props.formula === formula)? true : false
   }
   render () {
     return ( 
@@ -16,7 +16,9 @@ class FormulationDetails extends Component  {
         {this.props.formula.tags.map(tag => <p>{tag}</p>)}
         <h4> Conditions: </h4>
         {this.props.formula.conditions.map(condition => <p>{condition}</p>)}
-        <input type="checkbox" id="favourite" onChange={(event) => this.props.handleCheck(event, this.props.formula)} checked={!!this.isFavorite()}/>
+        <input type="checkbox" id="favourite" onChange={(event) => this.props.handleCheck(event, this.props.formula)} checked={this.isFavourite()}/>
+   
+
       </div>
      );
   }
