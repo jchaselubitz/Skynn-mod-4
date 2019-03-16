@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Data from '../data.js'
 import SideBar from './SideBar';
 import FormulationDetails from './FormulationDetails'
+import AddNewFormulation from './AddNewFormulation'
 
 // send formulations to sidebar
 
@@ -40,9 +41,13 @@ addRemoveToFavorites = (event, formula) => {
     })
   }
 }
-// ===========ADD NEW FUNCTIONS=============
+// ===========ADD NEW FUNCTION=============
 
-
+addNewFormulation = (formulation) => {
+  this.setState({
+    formulas: [...this.state.formulas, formulation]
+  })
+}
 
 
 // ===========RENDER=============
@@ -52,6 +57,7 @@ addRemoveToFavorites = (event, formula) => {
       <div className="sidebar">
         <SideBar formulas={this.state.formulas} setSelected={this.setSelected} favourites={this.state.favourites}/>
         {this.state.selectedFormulaId !== undefined &&  <FormulationDetails formula={this.filterFormula()} handleCheck={this.addRemoveToFavorites} favourites={this.state.favourites} />}
+        {/* <AddNewFormulation formulas={this.state.formulas} /> */}
       </div>
     );
   }
